@@ -97,7 +97,8 @@ onPlayStopTimer=(isPlay)=>{
       </header>
       <Session isPlay={this.state.isPlay} session={this.state.sessionDuration} increase={this.increaseSession} decrease={this.decreaseSession} />
       <Break  isPlay={this.state.isPlay} break={this.state.breakDuration} increase={this.increaseBreak} decrease={this.decreaseBreak} />
-      <Timer timerMinute={this.state.timerMinute} breakTimer = {this.state.breakDruation} updateTimerMinute={this.onUpdateTimeMinute} toggle={this.onToggleInterval} resetSession={this.onResetSession} onPlayStopTimer={this.onPlayStopTimer}/>
+      <Timer isPlay={this.state.isPlay} timerMinute={this.state.timerMinute} breakTimer = {this.state.breakDruation} 
+      updateTimerMinute={this.onUpdateTimeMinute} toggle={this.onToggleInterval} resetSession={this.onResetSession} onPlayStopTimer={this.onPlayStopTimer}/>
     </div>
   );
 }

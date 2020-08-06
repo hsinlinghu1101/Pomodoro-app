@@ -73,7 +73,7 @@ reset=()=>{
 
     render() {
         return (
-            <form>
+            <section>
                 <h2>{this.state.isSession === true ? "Session": "Break"}</h2>
                 <h1>
                 <span>{this.props.timerMinute}</span>
@@ -81,10 +81,10 @@ reset=()=>{
                 <span>{this.state.timerSecond === 0 ? "00" : 
                 this.state.timerSecond < 10 ? '0' + this.state.timerSecond : this.state.timerSecond}</span>
                 </h1>
-                <button onClick={this.play}>Play</button>
+                <button onClick={this.play} disabled={this.props.isPlay ===true? "disabled" : ""}>Play</button>
                 <button onClick={this.stop}>Stop</button>
                 <button onClick={this.reset}>Restart</button>
-            </form>
+            </section>
         )
     }
 }
